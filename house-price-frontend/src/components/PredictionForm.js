@@ -23,9 +23,21 @@ export default function PredictionForm() {
     e.preventDefault();
 
     try {
-      const res = await fetch('https://house-pred-ml-53gm.onrender.com/api/predict/', {
+      // const res = await fetch('https://house-pred-ml-53gm.onrender.com/api/predict/', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(
+      //     Object.fromEntries(
+      //       Object.entries(formData).map(([key, val]) => [key, parseFloat(val)])
+      //     )
+      //   ),
+      // });
+      
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(
           Object.fromEntries(
             Object.entries(formData).map(([key, val]) => [key, parseFloat(val)])
