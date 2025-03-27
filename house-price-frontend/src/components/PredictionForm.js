@@ -23,7 +23,7 @@ export default function PredictionForm() {
     e.preventDefault();
 
     try {
-      const res = await fetch('https://house-pred-ml-53gm.onrender.com/predict/', {
+      const res = await fetch('https://house-pred-ml-53gm.onrender.com/api/predict/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(
@@ -46,11 +46,11 @@ export default function PredictionForm() {
 
   return (
     <div className="max-w-lg mx-auto bg-white p-8 rounded-xl shadow-md space-y-6 mt-10">
-      <h2 className="text-2xl font-bold text-center">California House Price Predictor</h2>
+      <h2 className="text-2xl font-bold text-center text-emerald-800">California House Price Predictor</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         {Object.keys(formData).map((key) => (
           <div key={key}>
-            <label className="block text-sm font-medium">{key}</label>
+            <label className="block text-sm font-medium text-black">{key}</label>
             <input
               type="number"
               name={key}
