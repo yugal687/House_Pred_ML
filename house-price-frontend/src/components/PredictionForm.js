@@ -44,7 +44,6 @@ export default function PredictionForm() {
           )
         ),
       });
-
       const data = await res.json();
       if (res.ok) {
         setResult(`Predicted Price: $${(data.predicted_price * 100000).toFixed(2)}`);
