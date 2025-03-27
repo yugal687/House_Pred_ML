@@ -65,6 +65,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  
+    "https://house-price-frontend.vercel.app",
+    
 ]
 # end
 
