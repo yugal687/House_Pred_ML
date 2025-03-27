@@ -64,7 +64,7 @@ MIDDLEWARE = [
 # CORS_ALLOW_ALL_ORIGINS = Fase,
 
 CORS_ALLOWED_ORIGINS = [
-    "https://house-pred-ml-frontend.vercel.app/predict",
+    "https://house-pred-ml-frontend.vercel.app/",
     "http://localhost:3000",  
     
 ]
