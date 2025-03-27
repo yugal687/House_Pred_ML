@@ -68,6 +68,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://house-price-frontend.vercel.app",
     
 ]
+
 # end
 
 ROOT_URLCONF = 'house_price_project.urls'
